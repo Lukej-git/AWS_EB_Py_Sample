@@ -10,7 +10,7 @@ cd YOUR_REPOSITORY
 #### Replace YOUR_REPOSITORY with your Elastic Beanstalk environment name.
 
 ### Step 2: Install the Elastic Beanstalk CLI (If Not Installed)
-### Ensure you have the AWS Elastic Beanstalk CLI installed:
+Ensure you have the AWS Elastic Beanstalk CLI installed:
 ````
 pip install awsebcli --upgrade
 ````
@@ -19,11 +19,10 @@ pip install awsebcli --upgrade
 ````
 eb init
 ````
-
-#### -Select your AWS region.
-#### -Choose the Elastic Beanstalk application associated with your project.
-#### -Select the Python platform (e.g., Python 3.8 running on 64bit Amazon Linux 2).
-#### -Set up the SSH key pair (optional but recommended).
+-Select your AWS region.
+-Choose the Elastic Beanstalk application associated with your project.
+-Select the Python platform (e.g., Python 3.8 running on 64bit Amazon Linux 2).
+-Set up the SSH key pair (optional but recommended).
 
 ### Step 4: Create the New Version Package Bundle
 #### 1. Create a ZIP archive of the application code:
@@ -48,8 +47,8 @@ aws elasticbeanstalk create-application-version \
   --source-bundle S3Bucket="YOUR_S3_BUCKET",S3Key="app-v0.0.2.zip"
 ````
 
-#### Replace YOUR_APPLICATION_NAME with your Elastic Beanstalk application name.
-#### Replace YOUR_S3_BUCKET with your S3 bucket name.
+Replace YOUR_APPLICATION_NAME with your Elastic Beanstalk application name.
+Replace YOUR_S3_BUCKET with your S3 bucket name.
 
 ### Step 6: Deploy the New Version to Your Environment
 
@@ -59,10 +58,10 @@ aws elasticbeanstalk update-environment \
   --version-label v0.0.2
 ````
 
-#### Replace YOUR_ENVIRONMENT_NAME with your Elastic Beanstalk environment name.
+Replace YOUR_ENVIRONMENT_NAME with your Elastic Beanstalk environment name.
 
 ### Step 7: Verify Deployment
-#### Check the environment status:
+Check the environment status:
 ````
 eb status
 ````
@@ -73,7 +72,7 @@ eb logs
 ````
 
 ### Optional: Roll Back to a Previous Version
-#### If the new version has issues, you can roll back to v0.0.1:
+If the new version has issues, you can roll back to v0.0.1:
 ````
 aws elasticbeanstalk update-environment \
   --environment-name YOUR_ENVIRONMENT_NAME \
