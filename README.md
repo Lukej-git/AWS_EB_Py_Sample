@@ -29,10 +29,9 @@ eb init
 ````
 zip -r app-v0.0.2.zip . -x "*.git*" "*__pycache__*" "*.DS_Store*"
 ````
+This will package the necessary files excluding Git metadata and cache files.
 
-##### This will package the necessary files excluding Git metadata and cache files.
-
-### 2. Upload the ZIP file to an S3 bucket (Replace with your bucket name):
+#### 2. Upload the ZIP file to an S3 bucket (Replace with your bucket name):
 
 ````
 aws s3 cp app-v0.0.2.zip s3://YOUR_S3_BUCKET/
