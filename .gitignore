@@ -171,4 +171,4 @@ cython_debug/
 .pypirc
 
 # package folder
-.zip
+*.zip
