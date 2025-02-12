@@ -19,10 +19,10 @@ pip install awsebcli --upgrade
 ````
 eb init
 ````
--Select your AWS region.
--Choose the Elastic Beanstalk application associated with your project.
--Select the Python platform (e.g., Python 3.8 running on 64bit Amazon Linux 2).
--Set up the SSH key pair (optional but recommended).
+- Select your AWS region.
+- Choose the Elastic Beanstalk application associated with your project.
+- Select the Python platform (e.g., Python 3.8 running on 64bit Amazon Linux 2).
+- Set up the SSH key pair (optional but recommended).
 
 ### Step 4: Create the New Version Package Bundle
 #### 1. Create a ZIP archive of the application code:
